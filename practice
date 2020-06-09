@@ -1,0 +1,26 @@
+require "pry"
+#binding.pry
+spice_rack = [
+  [1,2,3],
+  [4,5,6],
+  [7,8,9]
+]
+
+def now
+outer_results = []
+row_index = 0
+while row_index < spice_rack.count do
+min_value = 0
+  element_index = 0
+  while element_index < spice_rack[row_index].count do
+   if spice_rack[row_index][element_index].min <min_value
+   min_value= spice_rack[row_index][element_index].min
+   outer_results << min_value
+end
+element_index += 1
+end
+row_index +=1 
+end
+end
+
+
